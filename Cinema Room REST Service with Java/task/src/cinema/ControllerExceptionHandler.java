@@ -1,5 +1,6 @@
 package cinema;
 
+import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -21,5 +22,10 @@ public class ControllerExceptionHandler {
     public ResponseEntity<ErrorMessage> handleWrongToken(WrongTokenException e) {
        ErrorMessage body = new ErrorMessage(e.getMessage());
        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(WrongPasswordException.class)
+    public ResponseEntity<ErrorMessage> handleWrongPassword(WrongPasswordException e) {
+        ErrorMessage body = new ErrorMessage(e.getMessage());
+        return new ResponseEntity<>(body, HttpStatus.UNAUTHORIZED);
     }
 }

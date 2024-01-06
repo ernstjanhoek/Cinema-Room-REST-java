@@ -8,6 +8,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 public class Cinema {
+    private int available;
+    private int purchased;
+    private int income;
     private int rows;
     private int columns;
     private List<Seat> seats = new ArrayList<>();
@@ -16,6 +19,9 @@ public class Cinema {
     Cinema(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
+        this.available = rows * columns;
+        this.purchased = 0;
+        this.income = 0;
         List<Seat> threadSafeList = new ArrayList<>();
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= columns; j++) {
@@ -50,5 +56,26 @@ public class Cinema {
     }
     public void setTickets(Map<UUID, Seat> tickets) {
         this.tickets = tickets;
+    }
+    public void incrementAvailable() {
+        this.available++;
+    }
+    public void decrementAvailable() {
+        this.available--;
+    }
+    public int retrieveAvailable() {
+        return this.available;
+    }
+    public void incrementPurchased() {
+        this.purchased++;
+    }
+    public int retrievePurchased() {
+        return this.purchased;
+    }
+    public void increaseIncome(int value) {
+        this.income += value;
+    }
+    public int retrieveIncome() {
+        return this.income;
     }
 }

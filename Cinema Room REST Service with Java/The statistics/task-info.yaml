@@ -863,6 +863,15 @@ files:
   - name: src/cinema/StatsResponse.java
     visible: true
     learner_created: true
+  - name: src/cinema/ReturnStats.java
+    visible: true
+    learner_created: true
+  - name: src/cinema/WrongPasswordException.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13378#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: Execution failed
+  time: "Sat, 06 Jan 2024 00:38:33 UTC"
 record: 4
