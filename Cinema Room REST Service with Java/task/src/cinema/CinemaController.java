@@ -39,7 +39,6 @@ public class CinemaController {
             throw new AlreadyBookedException("The ticket has been already purchased!");
         }
     }
-
     @PostMapping("/return")
     public ReturnResponse returnTicket(@RequestBody TicketRequest ticket) {
         UUID localUUID;
@@ -53,7 +52,9 @@ public class CinemaController {
             ReturnResponse response = new ReturnResponse(localTicket);
             cinema.retrieveTickets().remove(localUUID);
             cinema.getSeats().get(cinema.returnSeatIndex(localTicket.getRow(), localTicket.getColumn())).setAvailable(true);
+            cinema.decreaseIncome(localTicket.getPrice());
             cinema.incrementAvailable();
+            cinema.decrementPurchased();
             return response;
         } else {
             throw new WrongTokenException("Wrong token!");

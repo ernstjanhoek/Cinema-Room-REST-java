@@ -69,11 +69,17 @@ public class Cinema {
     public void incrementPurchased() {
         this.purchased++;
     }
+    public void decrementPurchased() {
+        this.purchased--;
+    }
     public int retrievePurchased() {
         return this.purchased;
     }
     public void increaseIncome(int value) {
         this.income += value;
+    }
+    public void decreaseIncome(int value) {
+        this.income -= value;
     }
     public int retrieveIncome() {
         return this.income;
