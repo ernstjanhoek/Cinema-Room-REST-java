@@ -18,6 +18,11 @@ files:
       }
     learner_created: false
 feedback_link: https://hyperskill.org/learn/step/13219#comment
-status: Solved
+status: Failed
+feedback:
+  message: Answer choices will be shuffled next time.
+  time: "Mon, 08 Jan 2024 09:00:12 UTC"
 record: -1
+selected_options:
+  - 0
 local_check: false

@@ -444,6 +444,36 @@ files:
           };
       }
     learner_created: false
+  - name: src/cinema/CinemaController.java
+    visible: true
+    learner_created: true
+  - name: src/cinema/ControllerExceptionHandler.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/13377#comment
 status: Failed
+feedback:
+  message: "Exception in test #1\n\nCannot start Spring application\n\norg.springframework.beans.factory.BeanCreationException:\
+    \ Error creating bean with name &#39;controllerExceptionHandler&#39;: Lookup method\
+    \ resolution failed\n\tat org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470)\n\
+    \tat org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340)\n\
+    \tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283)\n\
+    \tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)\n\
+    \tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)\n\
+    \tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)\n\
+    \tat org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)\n\
+    \tat org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)\n\
+    \tat org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)\n\
+    \tat org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)\n\
+    \tat org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)\n\
+    \tat org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)\n\
+    \tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)\n\
+    \tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)\n\
+    \tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)\n\
+    \tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)\n\
+    \tat org.springframework.boot.SpringApplication.run(SpringApplication.java:308)\n\
+    \tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)\n\
+    \tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)\n\
+    \tat cinema.Main.main(Main.java:9)"
+  time: "Wed, 31 Jul 2024 13:33:12 UTC"
 record: 3

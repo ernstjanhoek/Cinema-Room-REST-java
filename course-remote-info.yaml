@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/25574/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Sat, 06 Jan 2024 08:59:40 UTC"
+update_date: "Wed, 31 Jul 2024 13:26:11 UTC"
 stages:
   - id: 945
     step: 13375
@@ -19,18 +19,24 @@ stages:
     is_completed: true
 topics:
   0:
+    - title: Data structures
+      theory_id: 40371
     - title: Abstract and concrete data structures
       theory_id: 16927
-    - title: "HTTP: HyperText Transfer Protocol"
-      theory_id: 6569
     - title: "Write, compile, and run"
       theory_id: 3739
     - title: "Basic terms: JVM, JRE, JDK"
       theory_id: 3499
+    - title: Operating systems
+      theory_id: 9704
     - title: Command line overview
       theory_id: 8977
     - title: Parameters and options
       theory_id: 9746
+    - title: Running programs on your computer
+      theory_id: 3746
+    - title: "HTTP: HyperText Transfer Protocol"
+      theory_id: 6569
     - title: Spring and Spring Boot frameworks
       theory_id: 7944
     - title: Getting started with Spring Boot
@@ -119,8 +125,6 @@ topics:
       theory_id: 3511
     - title: Arrays as parameters
       theory_id: 3594
-    - title: Web development
-      theory_id: 13931
     - title: Characters
       theory_id: 3514
     - title: String
@@ -153,6 +157,8 @@ topics:
       theory_id: 6216
     - title: Libraries
       theory_id: 8504
+    - title: Web development
+      theory_id: 13931
     - title: Frameworks
       theory_id: 6701
     - title: What is object-oriented programming
@@ -173,8 +179,6 @@ topics:
       theory_id: 8956
     - title: Coupling and cohesion
       theory_id: 21478
-    - title: HTML basics
-      theory_id: 6434
     - title: Introduction to software architecture
       theory_id: 15368
     - title: Multidimensional array
@@ -193,7 +197,7 @@ topics:
       theory_id: 3493
     - title: What are collections
       theory_id: 3770
-    - title: The Collections Framework overview
+    - title: The Collections framework overview
       theory_id: 3624
     - title: ArrayList
       theory_id: 3567
