@@ -1,23 +1,24 @@
 package cinema.model;
 
+import java.util.UUID;
+
 public class Seat {
     private final int row;
     private final int column;
     private final int price;
-    private boolean available;
+    private UUID token;
 
     public Seat(int row, int column, int price) {
         this.row = row;
         this.column = column;
         this.price = price;
-        this.available = true;
     }
 
-    public Seat(int row, int column, int price, boolean available) {
+    public Seat(int row, int column, int price, UUID uuid) {
         this.row = row;
         this.column = column;
         this.price = price;
-        this.available = true;
+        this.token = uuid;
     }
 
     static public Seat copy(Seat seat) {
@@ -25,12 +26,28 @@ public class Seat {
                 seat.getRow(),
                 seat.getColumn(),
                 seat.getPrice(),
-                seat.isAvailable()
+                seat.getToken()
         );
     }
 
-    public void setAvailable(boolean available) {
-        this.available = available;
+    public void generateNewToken() {
+        this.token = UUID.randomUUID();
+    }
+
+    public boolean isAvailable() {
+        return this.token == null;
+    }
+
+    public void makeAvailable() {
+        this.token = null;
+    }
+
+    public UUID getToken() {
+        return token;
+    }
+
+    public void setToken(UUID token) {
+        this.token = token;
     }
 
     public int getRow() {
@@ -43,9 +60,5 @@ public class Seat {
 
     public int getPrice() {
         return price;
-    }
-
-    public boolean isAvailable() {
-        return available;
     }
 }
